@@ -1,0 +1,463 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@100;300;400;600&display=swap");
+* { font-family: "Montserrat", sans-serif; margin: 0; padding: 0; -webkit-box-sizing: border-box; box-sizing: border-box; outline: none; border: none; text-decoration: none; text-transform: capitalize; -webkit-transition: all 0.2s linear; transition: all 0.2s linear; }
+
+html { font-size: 62.5%; overflow-x: hidden; scroll-behavior: smooth; }
+
+html::-webkit-scrollbar { width: 1rem; }
+
+html::-webkit-scrollbar-track { background: transparent; }
+
+html::-webkit-scrollbar-thumb { background: #f8f4fb; }
+
+body { padding-left: 30rem; }
+
+section { padding: 5% 5%; }
+
+section:nth-child(even) { background: #f6f6f6; }
+
+/* Segundo Estilo */
+.snd-style { color: #970bee; font-weight: 700; }
+
+/* Encabezado */
+.headings { display: -webkit-box; display: -ms-flexbox; display: flex; }
+
+.heading { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; margin-bottom: 1.5rem; }
+
+.heading img { max-width: 50%; }
+
+/* Botones */
+.btn { display: inline-block; margin-top: 1rem; padding: 1.2rem 3rem; cursor: pointer; color: #fff; background: #263238; font-size: 1.7rem; }
+
+.btn:hover { background: #a832f1; }
+
+/* Video */
+.video { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; margin-top: 2rem; }
+
+.video video { width: 50%; height: 100%; }
+
+/* Header */
+.header { position: fixed; top: 0; left: 0; z-index: 1000; background: #fff; width: 30rem; height: 100%; padding: 2rem; }
+
+.header .navbar { padding: 5% 0; }
+
+.header .navbar .content { background: #c599f0; padding: 2rem; }
+
+.header .navbar a { display: block; font-size: 1.5rem; margin: 3rem 0; color: #fff; }
+
+.header .navbar a i { color: #970bee; padding-right: 1rem; }
+
+.header .navbar a span { text-transform: none; }
+
+.header .navbar a:hover { color: #777; }
+
+.header .navbar a:hover i { padding-right: 2rem; }
+
+.header .navbar .padding { margin-left: 2rem; }
+
+.header .navbar .padding i { font-size: 1.5rem; }
+
+.header .navbar .space { margin: 8rem 0; }
+
+#menu-btn { position: fixed; top: 0; right: -.3rem; height: 5rem; width: 5rem; line-height: 5rem; font-size: 2.5rem; background: #c599f0; color: #fff; cursor: pointer; text-align: center; z-index: 10000; border-radius: 10%; display: none; }
+
+#menu-btn.fa-times { background: #fff; color: #970bee; }
+
+/* Arrows */
+.arrows { padding-top: 2%; padding-bottom: 2%; }
+
+.arrows .block { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; }
+
+.arrows .block .style { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-align: center; -ms-flex-align: center; align-items: center; row-gap: 1rem; }
+
+.arrows .block .style i { font-size: 4rem; color: #970bee; text-align: center; }
+
+.arrows .block .style h3 { font-size: 1.5rem; padding-bottom: 0.5rem; color: #263238; }
+
+.arrows .block .style span { text-transform: none; }
+
+.arrows .block .style:hover i { scale: 1.2; }
+
+.arrows .block .style:hover h3 { color: #970bee; }
+
+/* Arrows */
+/* Banner */
+.banner img { width: 100%; }
+
+/* Pàgina Index */
+/* Bienvenida */
+.index .info { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-column-gap: .5rem; column-gap: .5rem; text-align: center; margin-top: 2rem; margin-bottom: 1rem; }
+
+.index .info .text { font-size: 1.5rem; text-transform: none; }
+
+/* Recomendaciones */
+.suggestion .title h1 { font-size: 2rem; text-transform: none; text-align: center; margin: 2rem auto 4rem auto; color: #970bee; }
+
+.suggestion .suggestions { display: -ms-grid; display: grid; -ms-grid-columns: (minmax(20rem, 1fr))[auto-fit]; grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); gap: 2rem; margin: 1rem 1rem; }
+
+.suggestion .suggestions .block .content { padding: 2rem 0; }
+
+.suggestion .suggestions .block .content .line { display: block; background: #970bee; }
+
+.suggestion .suggestions .block .content .line .title { text-align: center; font-size: 1.5rem; letter-spacing: 0.5rem; padding: 1rem; color: #e6d2fa; }
+
+.suggestion .suggestions .block .content .line .title span { text-transform: none; }
+
+.suggestion .suggestions .block .bg1 { background: no-repeat center/cover; }
+
+.suggestion .suggestions .block .bg1 img { max-width: 100%; }
+
+.suggestion .suggestions .block .bg2 { background: no-repeat center/cover; }
+
+.suggestion .suggestions .block .bg2 img { max-width: 100%; }
+
+.suggestion .suggestions .block .bg3 { background: no-repeat center/cover; }
+
+.suggestion .suggestions .block .bg3 img { max-width: 100%; }
+
+.suggestion .suggestions .block:hover { scale: 1.1; }
+
+/* Contenido */
+.subject .info-container { display: -ms-grid; display: grid; -ms-grid-columns: (minmax(40rem, 1fr))[auto-fit]; grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr)); gap: 2rem; margin-top: 2rem; margin-bottom: 2rem; }
+
+.subject .info-container .box { padding: 3rem; background: #fff; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; gap: 1.5rem; border: 0.1rem solid #999; }
+
+.subject .info-container .box i { height: 5rem; width: 5rem; line-height: 5rem; font-size: 2rem; border-radius: 50%; background: #a832f1; color: #fff; text-align: center; }
+
+.subject .info-container .box .info h3 { font-size: 2rem; padding-bottom: 0.5rem; color: #263238; }
+
+.subject .info-container .box .info p { font-size: 1.5rem; color: #777; text-transform: capitalize; }
+
+.subject .info-container .box .info p span { text-transform: none; }
+
+.subject .info-container .box .box_int { top: 0; left: 0; height: 100%; width: 100%; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -ms-flex-pack: distribute; justify-content: space-around; background: #f8f4fb; padding: 2rem; }
+
+.subject .info-container .box:hover { background: #e6d2fa; border: #970bee; scale: 1.05; }
+
+/* Creditos */
+.credits .credit { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; font-size: 2rem; text-transform: capitalize; margin: 3rem 0; }
+
+.credits .credit h1 { color: #a832f1; margin-bottom: 2rem; }
+
+.credits .credit h1 span { text-transform: uppercase; }
+
+.credits .credit p { margin: 2rem 0; font-size: 1.5rem; display: block; text-align: center; margin-bottom: 1rem; }
+
+.credits .credit p span { text-transform: lowercase; }
+
+.credits .credit .title { color: #047c3b; }
+
+/* Fin Pàgina Inicio
+
+
+/* Pàgina Teachers */
+/* Profesores */
+.teachers .title h1 { font-size: 2rem; text-transform: none; text-align: center; margin: 2rem auto 4rem auto; color: #970bee; }
+
+.teachers .container { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; row-gap: 2rem; }
+
+.teachers .container .division { width: 90%; }
+
+.teachers .container .division .accordion { width: 100%; background: #f8f4fb; padding: 1rem; border-radius: .8rem; }
+
+.teachers .container .division .accordion .name, .teachers .container .division .accordion .subname { text-align: center; margin: 1rem auto; text-transform: lowercase; }
+
+.teachers .container .division .accordion .accordion-content { border-radius: .8rem; margin: 1rem 0; overflow: hidden; background: #fff; }
+
+.teachers .container .division .accordion .accordion-content header { display: -webkit-box; display: -ms-flexbox; display: flex; min-height: 5rem; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; padding: 1.5rem 1.5rem; cursor: pointer; border-bottom: 0.1rem solid #999; border-color: #970bee; -webkit-transition: all 0.2s linear; transition: all 0.2s linear; }
+
+.teachers .container .division .accordion .accordion-content header .title { font-size: 1.5rem; color: #970bee; text-transform: capitalize; }
+
+.teachers .container .division .accordion .accordion-content header .title span { text-transform: none; }
+
+.teachers .container .division .accordion .accordion-content header i { font-size: 2rem; color: #970bee; }
+
+.teachers .container .division .accordion .accordion-content .description { padding: auto 1.5rem; font-size: 1.2rem; height: 0; -webkit-transition: all 0.2s linear; transition: all 0.2s linear; }
+
+.teachers .container .division .accordion .accordion-content .description .info { margin: 2rem 2rem; }
+
+.teachers .container .division .accordion .accordion-content.open { padding-bottom: 1rem; }
+
+.teachers .presentacion { margin: 5% auto; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; row-gap: 5rem; -webkit-box-pack: space-evenly; -ms-flex-pack: space-evenly; justify-content: space-evenly; }
+
+.teachers .presentacion .nombre { text-align: center; font-size: 2rem; color: #777; margin-bottom: 2rem; }
+
+.teachers .presentacion .nombre span { text-transform: none; }
+
+.teachers .info { text-align: center; margin-top: 2rem; margin-bottom: 2rem; }
+
+.teachers .info .text { font-size: 1.5rem; text-transform: none; margin-bottom: 1rem; }
+
+/* Pàgina Teachers */
+/* Página Students */
+/* Estudiantes */
+.students .info-container { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-column-gap: 4rem; column-gap: 4rem; width: 100%; height: 100%; margin: 3rem auto; }
+
+.students .info-container .box { -webkit-box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.1); box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.1); padding: 3rem; background: #fff; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-align: center; -ms-flex-align: center; align-items: center; gap: 1.5rem; }
+
+.students .info-container .box i { height: 5rem; width: 5rem; line-height: 3rem; font-size: 2rem; border-radius: 50%; background: #a832f1; color: #fff; text-align: center; padding: 1rem; }
+
+.students .info-container .box .info { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; }
+
+.students .info-container .box .info h3 { font-size: 2rem; padding-bottom: 0.5rem; text-align: center; margin-top: 1rem; color: #263238; }
+
+.students .info-container .box .info p { font-size: 1.5rem; color: #777; text-transform: none; line-height: 2rem; text-align: justify; margin: 2rem auto; }
+
+.students .info-container .box .info .btn { text-align: center; }
+
+.students .indicaciones p { text-align: center; text-transform: none; font-size: 1.5rem; padding: 1rem; }
+
+/* Página Students */
+/* Página Knowledge */
+/* Sección Conocimiento*/
+.knowledge .info { text-align: center; margin-top: 2rem; margin-bottom: 2rem; }
+
+.knowledge .info .title { margin: 1rem auto 2rem auto; color: #970bee; font-size: 2rem; text-transform: none; }
+
+.knowledge .info .text { font-size: 1.5rem; text-transform: none; margin-bottom: 1rem; }
+
+.knowledge .info .frame { margin: 2rem auto; }
+
+/* Sección Metodología */
+.method .title h1 { font-size: 2rem; text-transform: none; text-align: center; margin: 2rem auto 4rem auto; color: #970bee; }
+
+.method .accordion { width: 100%; background: #f8f4fb; padding: 1rem; border-radius: .8rem; }
+
+.method .accordion .accordion-content { border-radius: .8rem; margin: 1rem 0; overflow: hidden; background: #fff; }
+
+.method .accordion .accordion-content header { display: -webkit-box; display: -ms-flexbox; display: flex; min-height: 5rem; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; padding: 1.5rem 1.5rem; cursor: pointer; border-bottom: 0.1rem solid #999; border-color: #970bee; -webkit-transition: all 0.2s linear; transition: all 0.2s linear; margin-bottom: 1rem; }
+
+.method .accordion .accordion-content header .title { font-size: 1.5rem; font-weight: 600; color: #970bee; text-transform: none; }
+
+.method .accordion .accordion-content header i { font-size: 2rem; color: #970bee; }
+
+.method .accordion .accordion-content .description { padding: 0 1.5rem; font-size: 1.2rem; height: 0; -webkit-transition: all 0.2s linear; transition: all 0.2s linear; }
+
+.method .accordion .accordion-content .description .text { margin: 1rem 2rem; }
+
+.method .accordion .accordion-content .description .text .frame { margin: 2rem auto; }
+
+.method .accordion .accordion-content .description .text h3 { text-align: center; color: #a832f1; text-transform: lowercase; }
+
+.method .accordion .accordion-content .description .info-container { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-column-gap: 2rem; column-gap: 2rem; width: 100%; height: 100%; margin: 2rem auto; }
+
+.method .accordion .accordion-content .description .info-container .card { width: 50%; }
+
+.method .accordion .accordion-content .description .info-container .card .box { padding: 2rem; background: #fff; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-align: center; -ms-flex-align: center; align-items: center; gap: 1.5rem; }
+
+.method .accordion .accordion-content .description .info-container .card .box .info { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; }
+
+.method .accordion .accordion-content .description .info-container .card .box .info h3 { font-size: 1.5rem; padding-bottom: 0.5rem; text-align: center; margin-top: 1rem; text-transform: lowercase; color: #a832f1; }
+
+.method .accordion .accordion-content .description .info-container .card .box .info h4 { font-size: 1.2rem; text-align: center; margin-top: 2rem; text-transform: lowercase; color: #a832f1; }
+
+.method .accordion .accordion-content .description .info-container .card .box .info ul li { text-transform: lowercase; margin: 1.5rem; text-align: justify; }
+
+.method .accordion .accordion-content .description .info-container .card .br { border-right: solid 1px #a832f1; margin-right: -1rem; }
+
+.method .accordion .accordion-content .description p, .method .accordion .accordion-content .description li { font-size: 1.5rem; color: #263238; text-transform: none; line-height: 2rem; text-align: justify; margin: 2rem auto; }
+
+.method .accordion .accordion-content.open { padding-bottom: 1rem; }
+
+/* Pàgina Knowledge */
+/* Pàginas Unit */
+/* Sección Unidad */
+.unit .info-container { display: -ms-grid; display: grid; -ms-grid-columns: (minmax(40rem, 1fr))[auto-fit]; grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr)); gap: 2rem; margin-top: 4rem; }
+
+.unit .info-container .box { padding: 3rem; background: #fff; gap: 1.5rem; border: 0.1rem solid #999; }
+
+.unit .info-container .box .block { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: start; -ms-flex-pack: start; justify-content: start; -webkit-box-align: center; -ms-flex-align: center; align-items: center; gap: 2rem; }
+
+.unit .info-container .box .block i { height: 5rem; width: 5rem; line-height: 3rem; font-size: 2rem; border-radius: 50%; background: #a832f1; color: #fff; text-align: center; padding: 1rem; }
+
+.unit .info-container .box .block h3 { font-size: 2rem; padding-bottom: 0.5rem; color: #263238; text-transform: lowercase; }
+
+.unit .info-container .box:hover { background: #e6d2fa; border: #970bee; scale: 1.05; }
+
+/* Pàginas Unit */
+/* Páginas Introducción */
+/* Intro */
+.intro .text { margin: 3rem; }
+
+.intro .text p { text-transform: none; font-size: 1.5rem; text-align: justify; line-height: 2; margin: 2rem 1rem; }
+
+/* Map */
+.map .content h1 { font-size: 2rem; text-transform: none; text-align: center; margin: 1rem auto 3rem auto; color: #970bee; }
+
+.map .content p { font-size: 1.5rem; text-transform: none; text-align: center; margin: 2rem 4rem; }
+
+/* Páginas Introducción */
+/* Páginas Evaluación */
+/* Principal */
+.principal .title h1 { font-size: 2rem; text-transform: none; text-align: center; margin: 2rem auto 1rem auto; color: #970bee; }
+
+.principal .content { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; margin-top: 1rem; }
+
+.principal .content .text p { text-align: center; margin: 1rem 0 2rem 0; text-transform: none; font-size: 1.5rem; line-height: 2rem; }
+
+.principal .content .info .table { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
+
+.principal .content .info .table img { width: 90%; }
+
+.principal .content .info p { color: #777; margin: 1rem 0; font-size: 1.2rem; text-align: center; text-transform: none; }
+
+/* Participación */
+.participation .content .title { margin: 1rem auto 2rem auto; }
+
+.participation .content .title h1 { font-size: 2rem; text-transform: none; text-align: center; color: #970bee; }
+
+.participation .content .text p { text-align: justify; margin: 1rem 4rem 2rem 4rem; text-transform: none; font-size: 1.5rem; line-height: 2rem; }
+
+.participation .content .text p .black { text-transform: none; }
+
+.participation .content .weighting { display: -ms-grid; display: grid; -ms-grid-columns: (minmax(20rem, 1fr))[auto-fit]; grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); gap: 2rem; margin: 2rem auto; }
+
+.participation .content .weighting .block { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; font-size: 2rem; margin-top: 2rem; color: #970bee; }
+
+.participation .content .weighting .block i { margin: 0 1rem; }
+
+.participation .content .equals { text-align: center; }
+
+.participation .content .equals p { font-size: 1.5rem; color: #777; }
+
+/* Organizador */
+.organizer .content .title { margin: 1rem auto 2rem auto; }
+
+.organizer .content .title h1 { font-size: 2rem; text-transform: none; text-align: center; color: #970bee; }
+
+.organizer .content .subtitle { margin: 5rem auto 1rem auto; }
+
+.organizer .content .subtitle h1 { font-size: 1.5rem; text-transform: none; text-align: center; color: #970bee; }
+
+.organizer .content .blocks { display: -ms-grid; display: grid; -ms-grid-columns: (minmax(20rem, 1fr))[auto-fit]; grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); gap: 2rem; }
+
+.organizer .content .blocks .block { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; background: #fff; border-radius: 5px; -webkit-box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.1); box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.1); }
+
+.organizer .content .blocks .block .info-container { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; padding: 2rem; }
+
+.organizer .content .blocks .block .info-container .text { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-column-gap: 1rem; column-gap: 1rem; margin-bottom: 1rem; font-size: 1.5rem; font-weight: 700; color: #047c3b; }
+
+.organizer .content .blocks .block .info-container .text p { text-transform: none; }
+
+.organizer .content .blocks .block .info-container .info { margin: auto 1rem; }
+
+.organizer .content .blocks .block .info-container .info li { text-transform: none; margin: 1rem; font-size: 1.2rem; }
+
+.organizer .content .subcontent .weighting { display: -webkit-box; display: -ms-flexbox; display: flex; margin: 2rem auto; }
+
+.organizer .content .subcontent .weighting .block { width: 25%; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; font-size: 2rem; margin: 1rem 2rem; color: #970bee; }
+
+.organizer .content .subcontent .weighting .block i { margin: 0 1rem; font-size: 3rem; }
+
+.organizer .content .subcontent .weighting .block .green { color: green; }
+
+.organizer .content .subcontent .weighting .block .blue { color: blue; }
+
+.organizer .content .subcontent .weighting .block .yellow { color: #f1de32; }
+
+.organizer .content .subcontent .weighting .block .red { color: red; }
+
+.organizer .content .subcontent .weighting .block p { text-transform: none; font-size: 1.2rem; text-align: center; color: #263238; margin: 1.5rem 0; line-height: 2rem; }
+
+.organizer .content .subcontent .weighting .block li { text-transform: none; font-size: 1.2rem; text-align: center; color: #263238; margin: 1.5rem 0; line-height: 2rem; }
+
+.organizer .content .subcontent .weighting .block h1 { font-size: 1.5rem; text-transform: none; font-weight: 700; color: #970bee; }
+
+/* Expo */
+.expo .content .title { margin: 1rem auto 2rem auto; }
+
+.expo .content .title h1 { font-size: 2rem; text-transform: none; text-align: center; color: #970bee; }
+
+.expo .content .blocks { display: -ms-grid; display: grid; -ms-grid-columns: (minmax(20rem, 1fr))[auto-fit]; grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); gap: 2rem; }
+
+.expo .content .blocks .block { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; background: #fff; border-radius: 5px; -webkit-box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.1); box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.1); }
+
+.expo .content .blocks .block .info-container { padding: 2rem; }
+
+.expo .content .blocks .block .info-container .text { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-column-gap: 1rem; column-gap: 1rem; margin-bottom: 1rem; font-size: 1.5rem; font-weight: 700; color: #047c3b; }
+
+.expo .content .blocks .block .info-container .text p { text-transform: none; }
+
+.expo .content .blocks .block .info-container .info { margin: auto 1rem; }
+
+.expo .content .blocks .block .info-container .info li { text-transform: none; margin: 1rem; font-size: 1.2rem; }
+
+/* Página Actividades */
+/* Actividades */
+.activities .info { text-align: center; margin-top: 2rem; margin-bottom: 2rem; }
+
+.activities .info .title { margin: 1rem auto 2rem auto; color: #970bee; font-size: 2rem; text-transform: none; }
+
+.activities .info .text { font-size: 1.5rem; text-transform: none; margin-bottom: 1rem; }
+
+/* Sesiones */
+.sessions .container { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; row-gap: 2rem; }
+
+.sessions .container .division { width: 90%; }
+
+.sessions .container .division .accordion { width: 100%; background: #f8f4fb; padding: 1rem; border-radius: .8rem; }
+
+.sessions .container .division .accordion .name, .sessions .container .division .accordion .subname { text-align: center; margin: 1rem auto; text-transform: lowercase; }
+
+.sessions .container .division .accordion .accordion-content { border-radius: .8rem; margin: 1rem 0; overflow: hidden; background: #fff; }
+
+.sessions .container .division .accordion .accordion-content header { display: -webkit-box; display: -ms-flexbox; display: flex; min-height: 5rem; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; padding: 1.5rem 1.5rem; cursor: pointer; border-bottom: 0.1rem solid #999; border-color: #970bee; -webkit-transition: all 0.2s linear; transition: all 0.2s linear; }
+
+.sessions .container .division .accordion .accordion-content header .title { font-size: 1.5rem; color: #970bee; text-transform: lowercase; }
+
+.sessions .container .division .accordion .accordion-content header i { font-size: 2rem; color: #970bee; }
+
+.sessions .container .division .accordion .accordion-content .description { padding: auto 1.5rem; font-size: 1.2rem; height: 0; -webkit-transition: all 0.2s linear; transition: all 0.2s linear; }
+
+.sessions .container .division .accordion .accordion-content .description .text { margin: 1rem 2rem; text-transform: none; }
+
+.sessions .container .division .accordion .accordion-content .description .text h3 { text-align: center; text-transform: lowercase; }
+
+.sessions .container .division .accordion .accordion-content .description .text h3 p { display: inline; color: #970bee; }
+
+.sessions .container .division .accordion .accordion-content .description p, .sessions .container .division .accordion .accordion-content .description li { font-size: 1.5rem; color: #263238; text-transform: none; line-height: 2rem; text-align: justify; margin: 2rem auto; }
+
+.sessions .container .division .accordion .accordion-content.open { padding-bottom: 1rem; }
+
+/* Página Consulta */
+/* Consulta */
+.consult .text { margin: 1rem 4rem; }
+
+.consult .text p { text-align: justify; text-transform: none; font-size: 1.5rem; line-height: 2rem; }
+
+/* Footer */
+.footer { background: #970bee; }
+
+.footer .text { color: #fff; text-align: center; font-size: 1.5rem; padding: 2rem; }
+
+/* Responsive Design */
+@media (max-width: 1200px) { html { font-size: 55%; } }
+
+@media (max-width: 991px) { body { padding-left: 0; }
+  .video video { width: 100%; height: 100%; }
+  #menu-btn { display: block; top: 12rem; }
+  .header { left: -110%; }
+  .header.active { left: 0; -webkit-box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.7); box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.7); padding: 0; width: 100%; background: #c599f0; }
+  .header.active a { font-size: 2rem; text-align: center; }
+  .home .content h3 { font-size: 2.5rem; }
+  .suggestion .suggestions { display: -ms-grid; display: grid; -ms-grid-columns: (minmax(40rem, 1fr))[auto-fit]; grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr)); gap: 2rem; margin: 2rem auto; }
+  .suggestion .suggestions .block { margin: 2rem auto; }
+  .teachers .container .division { width: 100%; }
+  .students .info-container { -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; row-gap: 2rem; }
+  .students .info-container .box { margin: 2rem auto; }
+  .sessions .container .division { width: 100%; } }
+
+@media (max-width: 626px) { html { font-size: 50%; }
+  html .headings { -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; }
+  html .heading img { max-width: 75%; }
+  html .accordion .info-container { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+  html .accordion .info-container .card { width: 100% !important; }
+  html .accordion .info-container .br { border-right: none !important; margin-right: 0 !important; border-bottom: solid 1px #a832f1; }
+  html .organizer .content .blocks { display: -ms-grid; display: grid; -ms-grid-columns: (minmax(30rem, 1fr))[auto-fit]; grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr)); gap: 2rem; }
+  html .organizer .content .weighting { -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-align: center; -ms-flex-align: center; align-items: center; row-gap: 2rem; }
+  html .organizer .content .weighting .block { width: 75% !important; margin: 2rem 4rem; }
+  html .organizer .content .weighting .block i { font-size: 4rem !important; }
+  html .expo .content .blocks { display: -ms-grid; display: grid; -ms-grid-columns: (minmax(30rem, 1fr))[auto-fit]; grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr)); gap: 2rem; }
+  #menu-btn { display: block; top: 8rem; }
+  .contact .row form .inputBox input { width: 100%; } }
+/*# sourceMappingURL=styles.css.map */

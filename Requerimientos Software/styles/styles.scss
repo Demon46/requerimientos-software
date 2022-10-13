@@ -1,0 +1,1505 @@
+//@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@100;300;400;600&display=swap');
+
+
+* {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: all 0.2s linear;
+}
+
+$morado1: #970bee;
+$morado2: #a832f1;
+$morado3: #c599f0;
+$morado4: #e6d2fa;
+$morado5: #f8f4fb;
+$poli: #76246e;
+$upiicsa: #047c3b;
+$black: #263238;
+$white: #fff;
+$grey: #777;
+$light-bg: #f6f6f6;
+$border: 0.1rem solid #999;
+
+@mixin grid($val) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax($val, 1fr));
+  gap: 2rem;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+
+  &::-webkit-scrollbar {
+    width: 1rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $morado5;
+  }
+}
+
+body {
+  padding-left: 30rem;
+}
+
+section {
+  padding: 5% 5%;
+
+  &:nth-child(even) {
+    background: $light-bg;
+  }
+}
+
+/* Segundo Estilo */
+.snd-style {
+  color: $morado1;
+  font-weight: 700;
+}
+
+/* Encabezado */
+.headings {
+  display: flex;
+}
+
+.heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5rem;
+
+  img {
+    max-width: 50%;
+  }
+}
+
+/* Botones */
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 1.2rem 3rem;
+  cursor: pointer;
+  color: $white;
+  background: $black;
+  font-size: 1.7rem;
+
+  &:hover {
+    background: $morado2;
+  }
+}
+
+/* Video */
+.video {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+
+  video {
+    width: 50%;
+    height: 100%;
+  }
+}
+
+/* Header */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background: $white;
+  width: 30rem;
+  height: 100%;
+  padding: 2rem;
+
+  .navbar {
+    padding: 5% 0;
+
+    .content {
+      background: $morado3;
+      padding: 2rem;
+    }
+
+    a {
+      display: block;
+      font-size: 1.5rem;
+      margin: 3rem 0;
+      color: $white;
+
+      i {
+        color: $morado1;
+        padding-right: 1rem;
+      }
+
+      span {
+        text-transform: none;
+      }
+
+      &:hover {
+        color: $grey;
+
+        i {
+          padding-right: 2rem;
+        }
+      }
+    }
+
+    .padding {
+      margin-left: 2rem;
+
+      i {
+        font-size: 1.5rem;
+      }
+    }
+
+    .space {
+      margin: 8rem 0;
+    }
+  }
+}
+
+#menu-btn {
+  position: fixed;
+  top: 0;
+  right: -.3rem;
+  height: 5rem;
+  width: 5rem;
+  line-height: 5rem;
+  font-size: 2.5rem;
+  background: $morado3;
+  color: $white;
+  cursor: pointer;
+  text-align: center;
+  z-index: 10000;
+  border-radius: 10%;
+  display: none;
+
+  &.fa-times {
+    background: $white;
+    color: $morado1;
+  }
+}
+
+/* Arrows */
+.arrows {
+  padding-top: 2%;
+  padding-bottom: 2%;
+
+  .block {
+    display: flex;
+    justify-content: space-between;
+
+    .style {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      row-gap: 1rem;
+
+      i {
+        font-size: 4rem;
+        color: $morado1;
+        text-align: center;
+      }
+
+      h3 {
+        font-size: 1.5rem;
+        padding-bottom: 0.5rem;
+        color: $black;
+      }
+
+      span {
+        text-transform: none;
+      }
+
+      &:hover {
+        i {
+          scale: 1.2;
+        }
+
+        h3 {
+          color: $morado1;
+        }
+      }
+    }
+  }
+}
+
+/* Arrows */
+
+/* Banner */
+.banner {
+
+  img {
+    width: 100%;
+  }
+}
+
+/* Pàgina Index */
+/* Bienvenida */
+.index {
+  .info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: .5rem;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+
+    .text {
+      font-size: 1.5rem;
+      text-transform: none;
+    }
+  }
+}
+
+/* Recomendaciones */
+.suggestion {
+  .title {
+    h1 {
+      font-size: 2rem;
+      text-transform: none;
+      text-align: center;
+      margin: 2rem auto 4rem auto;
+      color: $morado1;
+    }
+  }
+
+  .suggestions {
+    @include grid(20rem);
+    margin: 1rem 1rem;
+
+    .block {
+      .content {
+        padding: 2rem 0;
+
+        .line {
+          display: block;
+          background: $morado1;
+
+          .title {
+            text-align: center;
+            font-size: 1.5rem;
+            letter-spacing: 0.5rem;
+            padding: 1rem;
+            color: $morado4;
+
+            span {
+              text-transform: none;
+            }
+          }
+        }
+      }
+
+      .bg1 {
+        background: no-repeat center/cover;
+
+        img {
+          max-width: 100%;
+        }
+      }
+
+      .bg2 {
+        background: no-repeat center/cover;
+
+        img {
+          max-width: 100%;
+        }
+      }
+
+      .bg3 {
+        background: no-repeat center/cover;
+
+        img {
+          max-width: 100%;
+        }
+      }
+
+      &:hover {
+        scale: 1.1;
+      }
+    }
+  }
+}
+
+/* Contenido */
+.subject {
+  .info-container {
+    @include grid(40rem);
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+    .box {
+      padding: 3rem;
+      background: $white;
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      border: $border;
+
+      i {
+        height: 5rem;
+        width: 5rem;
+        line-height: 5rem;
+        font-size: 2rem;
+        border-radius: 50%;
+        background: $morado2;
+        color: $white;
+        text-align: center;
+      }
+
+      .info {
+        h3 {
+          font-size: 2rem;
+          padding-bottom: 0.5rem;
+          color: $black;
+        }
+
+        p {
+          font-size: 1.5rem;
+          color: $grey;
+          text-transform: capitalize;
+
+          span {
+            text-transform: none;
+          }
+        }
+      }
+
+      .box_int {
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        background: $morado5;
+        padding: 2rem;
+      }
+
+      &:hover {
+        background: $morado4;
+        border: $morado1;
+        scale: 1.05;
+      }
+    }
+  }
+}
+
+/* Creditos */
+.credits {
+  .credit {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    text-transform: capitalize;
+    margin: 3rem 0;
+
+    h1 {
+      color: $morado2;
+      margin-bottom: 2rem;
+
+      span {
+        text-transform: uppercase;
+      }
+    }
+
+    p {
+      margin: 2rem 0;
+      font-size: 1.5rem;
+      display: block;
+      text-align: center;
+      margin-bottom: 1rem;
+
+      span {
+        text-transform: lowercase;
+      }
+    }
+
+    .title {
+      color: $upiicsa;
+    }
+  }
+}
+
+/* Fin Pàgina Inicio
+
+
+/* Pàgina Teachers */
+/* Profesores */
+
+.teachers {
+  .title {
+    h1 {
+      font-size: 2rem;
+      text-transform: none;
+      text-align: center;
+      margin: 2rem auto 4rem auto;
+      color: $morado1;
+    }
+  }
+
+  .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 2rem;
+
+    .division{
+      width: 90%;
+
+      .accordion {
+        width: 100%;
+        background: $morado5;
+        padding: 1rem;
+        border-radius: .8rem;
+    
+        .name, .subname{
+          text-align: center;
+          margin: 1rem auto;
+          text-transform: lowercase;
+        }
+    
+        .accordion-content {
+          border-radius: .8rem;
+          margin: 1rem 0;
+          overflow: hidden;
+          background: $white;
+    
+          header {
+            display: flex;
+            min-height: 5rem;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.5rem 1.5rem;
+            cursor: pointer;
+            border-bottom: $border;
+            border-color: $morado1;
+            transition: all 0.2s linear;
+    
+            .title {
+              font-size: 1.5rem;
+              color: $morado1;
+              text-transform: capitalize;
+
+              span{
+                text-transform: none;
+              }
+            }
+    
+            i {
+              font-size: 2rem;
+              color: $morado1;
+            }
+          }
+    
+          .description {
+            padding: auto 1.5rem;
+            font-size: 1.2rem;
+            height: 0;
+            transition: all 0.2s linear;
+    
+            .info {
+              margin: 2rem 2rem;
+            }
+
+    
+          }
+    
+          &.open {
+            padding-bottom: 1rem;
+          }
+        }
+      }
+    }
+  }
+
+  .presentacion {
+    margin: 5% auto;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5rem;
+    justify-content: space-evenly;
+
+    .nombre {
+      text-align: center;
+      font-size: 2rem;
+      color: $grey;
+      margin-bottom: 2rem;
+
+      span {
+        text-transform: none;
+      }
+    }
+  }
+
+  .info {
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+    .text {
+      font-size: 1.5rem;
+      text-transform: none;
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+/* Pàgina Teachers */
+
+/* Página Students */
+/* Estudiantes */
+.students {
+  .info-container {
+    display: flex;
+    column-gap: 4rem;
+    width: 100%;
+    height: 100%;
+    margin: 3rem auto;
+
+    .box {
+      -webkit-box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.1);
+      box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.1);
+      padding: 3rem;
+      background: $white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+
+      i {
+        height: 5rem;
+        width: 5rem;
+        line-height: 3rem;
+        font-size: 2rem;
+        border-radius: 50%;
+        background: $morado2;
+        color: $white;
+        text-align: center;
+        padding: 1rem;
+      }
+
+      .info {
+
+        display: flex;
+        flex-direction: column;
+
+        h3 {
+          font-size: 2rem;
+          padding-bottom: 0.5rem;
+          text-align: center;
+          margin-top: 1rem;
+          color: $black;
+        }
+
+        p {
+          font-size: 1.5rem;
+          color: $grey;
+          text-transform: none;
+          line-height: 2rem;
+          text-align: justify;
+          margin: 2rem auto;
+        }
+
+        .btn {
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  .indicaciones {
+    p {
+      text-align: center;
+      text-transform: none;
+      font-size: 1.5rem;
+      padding: 1rem;
+    }
+  }
+}
+
+/* Página Students */
+
+/* Página Knowledge */
+/* Sección Conocimiento*/
+.knowledge {
+  .info {
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+    .title {
+      margin: 1rem auto 2rem auto;
+      color: $morado1;
+      font-size: 2rem;
+      text-transform: none;
+    }
+
+    .text {
+      font-size: 1.5rem;
+      text-transform: none;
+      margin-bottom: 1rem;
+    }
+
+    .frame {
+      margin: 2rem auto;
+    }
+  }
+}
+
+/* Sección Metodología */
+.method {
+  .title {
+    h1 {
+      font-size: 2rem;
+      text-transform: none;
+      text-align: center;
+      margin: 2rem auto 4rem auto;
+      color: $morado1;
+    }
+  }
+
+  .accordion {
+    width: 100%;
+    background: $morado5;
+    padding: 1rem;
+    border-radius: .8rem;
+
+    .accordion-content {
+      border-radius: .8rem;
+      margin: 1rem 0;
+      overflow: hidden;
+      background: $white;
+
+      header {
+        display: flex;
+        min-height: 5rem;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1.5rem 1.5rem;
+        cursor: pointer;
+        border-bottom: $border;
+        border-color: $morado1;
+        transition: all 0.2s linear;
+        margin-bottom: 1rem;
+
+        .title {
+          font-size: 1.5rem;
+          font-weight: 600;
+          color: $morado1;
+          text-transform: none;
+        }
+
+        i {
+          font-size: 2rem;
+          color: $morado1;
+        }
+      }
+
+      .description {
+        padding: 0 1.5rem;
+        font-size: 1.2rem;
+        height: 0;
+        transition: all 0.2s linear;
+
+        .text {
+          margin: 1rem 2rem;
+
+          .frame{
+            margin: 2rem auto;         
+          }
+
+          h3 {
+            text-align: center;
+            color: $morado2;
+            text-transform: lowercase;
+          }
+        }
+
+        .info-container {
+          display: flex;
+          column-gap: 2rem;
+          width: 100%;
+          height: 100%;
+          margin: 2rem auto;
+
+          .card {
+            width: 50%;
+
+            .box {
+              padding: 2rem;
+              background: $white;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              gap: 1.5rem;
+
+              .info {
+                display: flex;
+                flex-direction: column;
+
+                h3 {
+                  font-size: 1.5rem;
+                  padding-bottom: 0.5rem;
+                  text-align: center;
+                  margin-top: 1rem;
+                  text-transform: lowercase;
+                  color: $morado2;
+                }
+
+                h4 {
+                  font-size: 1.2rem;
+                  text-align: center;
+                  margin-top: 2rem;
+                  text-transform: lowercase;
+                  color: $morado2;
+                }
+
+                ul {
+                  li {
+                    text-transform: lowercase;
+                    margin: 1.5rem;
+                    text-align: justify;
+                  }
+                }
+              }
+            }
+
+            .br {
+              border-right: solid 1px $morado2;
+              margin-right: -1rem;
+            }
+          }
+
+        }
+
+        p,
+        li {
+          font-size: 1.5rem;
+          color: $black;
+          text-transform: none;
+          line-height: 2rem;
+          text-align: justify;
+          margin: 2rem auto;
+        }
+
+      }
+
+      &.open {
+        padding-bottom: 1rem;
+      }
+    }
+  }
+}
+
+/* Pàgina Knowledge */
+
+
+/* Pàginas Unit */
+/* Sección Unidad */
+.unit {
+  .info-container {
+    @include grid(40rem);
+    margin-top: 4rem;
+
+    .box {
+      padding: 3rem;
+      background: $white;
+      gap: 1.5rem;
+      border: $border;
+
+      .block {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 2rem;
+
+        i {
+          height: 5rem;
+          width: 5rem;
+          line-height: 3rem;
+          font-size: 2rem;
+          border-radius: 50%;
+          background: $morado2;
+          color: $white;
+          text-align: center;
+          padding: 1rem;
+        }
+
+        h3 {
+          font-size: 2rem;
+          padding-bottom: 0.5rem;
+          color: $black;
+          text-transform: lowercase;
+        }
+      }
+
+      &:hover {
+        background: $morado4;
+        border: $morado1;
+        scale: 1.05;
+      }
+    }
+  }
+}
+
+/* Pàginas Unit */
+
+/* Páginas Introducción */
+/* Intro */
+.intro {
+  .text {
+    margin: 3rem;
+
+    p {
+      text-transform: none;
+      font-size: 1.5rem;
+      text-align: justify;
+      line-height: 2;
+      margin: 2rem 1rem;
+    }
+  }
+}
+
+/* Map */
+.map {
+  .content {
+    h1 {
+      font-size: 2rem;
+      text-transform: none;
+      text-align: center;
+      margin: 1rem auto 3rem auto;
+      color: $morado1;
+    }
+
+    p {
+      font-size: 1.5rem;
+      text-transform: none;
+      text-align: center;
+      margin: 2rem 4rem;
+    }
+  }
+}
+
+/* Páginas Introducción */
+
+/* Páginas Evaluación */
+/* Principal */
+.principal {
+
+  .title {
+    h1 {
+      font-size: 2rem;
+      text-transform: none;
+      text-align: center;
+      margin: 2rem auto 1rem auto;
+      color: $morado1;
+    }
+  }
+
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 1rem;
+
+    .text p {
+      text-align: center;
+      margin: 1rem 0 2rem 0;
+      text-transform: none;
+      font-size: 1.5rem;
+      line-height: 2rem;
+    }
+
+    .info {
+      .table {
+        display: flex;
+        justify-content: center;
+
+        img {
+          width: 90%;
+        }
+      }
+
+      p {
+        color: $grey;
+        margin: 1rem 0;
+        font-size: 1.2rem;
+        text-align: center;
+        text-transform: none;
+      }
+    }
+  }
+}
+
+/* Participación */
+.participation {
+  .content {
+    .title {
+      margin: 1rem auto 2rem auto;
+
+      h1 {
+        font-size: 2rem;
+        text-transform: none;
+        text-align: center;
+        color: $morado1;
+      }
+    }
+
+    .text p {
+      text-align: justify;
+      margin: 1rem 4rem 2rem 4rem;
+      text-transform: none;
+      font-size: 1.5rem;
+      line-height: 2rem;
+
+      .black {
+        text-transform: none;
+      }
+    }
+
+    .weighting {
+      @include grid(20rem);
+      margin: 2rem auto;
+
+      .block {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+        margin-top: 2rem;
+        color: $morado1;
+
+        i {
+          margin: 0 1rem;
+        }
+      }
+    }
+
+    .equals {
+      text-align: center;
+
+      p {
+        font-size: 1.5rem;
+        color: $grey;
+      }
+    }
+  }
+}
+
+/* Organizador */
+.organizer {
+  .content {
+    .title {
+      margin: 1rem auto 2rem auto;
+
+      h1 {
+        font-size: 2rem;
+        text-transform: none;
+        text-align: center;
+        color: $morado1;
+      }
+    }
+
+    .subtitle{
+      margin: 5rem auto 1rem auto;
+
+      h1 {
+        font-size: 1.5rem;
+        text-transform: none;
+        text-align: center;
+        color: $morado1;
+      }
+    }
+
+    .blocks {
+      @include grid(20rem);
+
+      .block {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: $white;
+        border-radius: 5px;
+        -webkit-box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.1);
+        box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.1);
+
+        .info-container {
+          display: flex;
+          flex-direction: column;
+          padding: 2rem;
+
+          .text {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            column-gap: 1rem;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: $upiicsa;
+
+            p {
+              text-transform: none;
+            }
+          }
+
+          .info {
+            margin: auto 1rem;
+
+            li {
+              text-transform: none;
+              margin: 1rem;
+              font-size: 1.2rem;
+            }
+          }
+        }
+      }
+    }
+
+    .subcontent{
+      .weighting {
+        display: flex;
+        margin: 2rem auto;
+  
+        .block {
+          width: 25%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          font-size: 2rem;
+          margin: 1rem 2rem;
+          color: $morado1;
+  
+          i {
+            margin: 0 1rem;
+            font-size: 3rem;
+          }
+  
+          .green {
+            color: green;
+          }
+  
+          .blue {
+            color: blue;
+          }
+  
+          .yellow {
+            color: #f1de32;
+          }
+  
+          .red {
+            color: red;
+          }
+  
+          p {
+            text-transform: none;
+            font-size: 1.2rem;
+            text-align: center;
+            color: $black;
+            margin: 1.5rem 0;
+            line-height: 2rem;
+          }
+          
+          li {
+            text-transform: none;
+            font-size: 1.2rem;
+            text-align: center;
+            color: $black;
+            margin: 1.5rem 0;
+            line-height: 2rem;
+          }
+  
+          h1 {
+            font-size: 1.5rem;
+            text-transform: none;
+            font-weight: 700;
+            color: $morado1;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Expo */
+.expo {
+  .content {
+    .title {
+      margin: 1rem auto 2rem auto;
+
+      h1 {
+        font-size: 2rem;
+        text-transform: none;
+        text-align: center;
+        color: $morado1;
+      }
+    }
+
+    .blocks {
+
+      @include grid(20rem);
+
+      .block {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: $white;
+        border-radius: 5px;
+        -webkit-box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.1);
+        box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.1);
+
+        .info-container {
+          padding: 2rem;
+
+          .text {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            column-gap: 1rem;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: $upiicsa;
+
+            p {
+              text-transform: none;
+            }
+          }
+
+          .info {
+            margin: auto 1rem;
+
+            li {
+              text-transform: none;
+              margin: 1rem;
+              font-size: 1.2rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Página Actividades */
+/* Actividades */
+.activities {
+  .info {
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+    .title {
+      margin: 1rem auto 2rem auto;
+      color: $morado1;
+      font-size: 2rem;
+      text-transform: none;
+    }
+
+    .text {
+      font-size: 1.5rem;
+      text-transform: none;
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+/* Sesiones */
+.sessions {
+  .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 2rem;
+
+    .division{
+      width: 90%;
+
+      .accordion {
+        width: 100%;
+        background: $morado5;
+        padding: 1rem;
+        border-radius: .8rem;
+    
+        .name, .subname{
+          text-align: center;
+          margin: 1rem auto;
+          text-transform: lowercase;
+        }
+    
+        .accordion-content {
+          border-radius: .8rem;
+          margin: 1rem 0;
+          overflow: hidden;
+          background: $white;
+    
+          header {
+            display: flex;
+            min-height: 5rem;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.5rem 1.5rem;
+            cursor: pointer;
+            border-bottom: $border;
+            border-color: $morado1;
+            transition: all 0.2s linear;
+    
+            .title {
+              font-size: 1.5rem;
+              color: $morado1;
+              text-transform: lowercase;
+            }
+    
+            i {
+              font-size: 2rem;
+              color: $morado1;
+            }
+          }
+    
+          .description {
+            padding: auto 1.5rem;
+            font-size: 1.2rem;
+            height: 0;
+            transition: all 0.2s linear;
+    
+            .text {
+              margin: 1rem 2rem;
+              text-transform: none;
+    
+              h3 {
+                text-align: center;
+                text-transform: lowercase;
+    
+                p{
+                  display: inline;
+                  color: $morado1
+                }
+              }
+            }
+    
+            p,
+            li {
+              font-size: 1.5rem;
+              color: $black;
+              text-transform: none;
+              line-height: 2rem;
+              text-align: justify;
+              margin: 2rem auto;
+            }
+    
+          }
+    
+          &.open {
+            padding-bottom: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Página Consulta */
+/* Consulta */
+.consult {
+  .text {
+    margin: 1rem 4rem;
+
+    p {
+      text-align: justify;
+      text-transform: none;
+      font-size: 1.5rem;
+      line-height: 2rem;
+    }
+  }
+}
+
+/* Footer */
+.footer {
+  background: $morado1;
+
+  .text {
+    color: $white;
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 2rem;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+@media (max-width: 991px) {
+  body {
+    padding-left: 0;
+  }
+
+  .video {
+    video {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  #menu-btn {
+    display: block;
+    top: 12rem;
+  }
+
+  .header {
+    left: -110%;
+
+    &.active {
+      left: 0;
+      box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.7);
+      padding: 0;
+      width: 100%;
+      background: $morado3;
+
+      a {
+        font-size: 2rem;
+        text-align: center;
+      }
+    }
+  }
+
+  .home .content h3 {
+    font-size: 2.5rem;
+  }
+
+  .suggestion {
+    .suggestions {
+      @include grid(40rem);
+      margin: 2rem auto;
+
+      .block {
+        margin: 2rem auto;
+      }
+    }
+  }
+
+  .teachers{
+    .container{  
+      .division{
+        width: 100%;
+      }
+    }
+  }
+
+  .students {
+    .info-container {
+      flex-direction: column;
+      row-gap: 2rem;
+
+      .box {
+        margin: 2rem auto;
+      }
+    }
+  }
+
+  .sessions{
+    .container{  
+      .division{
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 626px) {
+  html {
+    font-size: 50%;
+
+    .headings {
+      flex-direction: column;
+    }
+
+    .heading {
+      img {
+        max-width: 75%;
+      }
+    }
+
+    .accordion {
+      .info-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .card {
+          width: 100% !important;
+        }
+
+        .br {
+          border-right: none !important;
+          margin-right: 0 !important;
+          border-bottom: solid 1px $morado2;
+        }
+      }
+    }
+
+    .organizer {
+      .content {
+        .blocks {
+          @include grid(30rem);
+        }
+
+        .weighting {
+          flex-direction: column;
+          align-items: center;
+          row-gap: 2rem;
+
+          .block {
+            width: 75% !important;
+            margin: 2rem 4rem;
+
+            i{
+              font-size: 4rem !important;
+            }
+          }
+        }
+      }
+    }
+
+    .expo {
+      .content {
+        .blocks {
+          @include grid(30rem);
+        }
+      }
+    }
+  }
+
+  #menu-btn {
+    display: block;
+    top: 8rem;
+  }
+
+  .contact .row form .inputBox input {
+    width: 100%;
+  }
+}
